@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb://kevin:kevin123@ds161517.mlab.com:61517/dashboard",
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "938d29390aab47fb5829",
+    "githubSecret": "6fdce48400f6a82a557da23a3b4c07e5d195a5f4"
+}
