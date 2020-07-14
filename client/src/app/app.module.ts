@@ -3,43 +3,19 @@ import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
-// import {
-//    MatAutocompleteModule,
-//    MatButtonModule,
-//    MatButtonToggleModule,
-//    MatCardModule,
-//    MatCheckboxModule,
-//    MatChipsModule,
-//    MatDatepickerModule,
-//    MatDialogModule,
-//    MatExpansionModule,
-//    MatGridListModule,
-//    MatInputModule,
-//    MatMenuModule,
-//    MatNativeDateModule,
-//    MatPaginatorModule,
-//    MatProgressBarModule,
-//    MatProgressSpinnerModule,
-//    MatRadioModule,
-//    MatRippleModule,
-//    MatSelectModule,
-//    MatSliderModule,
-//    MatSlideToggleModule,
-//    MatSnackBarModule,
-//    MatSortModule,
-//    MatTableModule,
-//    MatTabsModule,
-//    MatTooltipModule,
-//    MatStepperModule,
-//  } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import * as fromHome from './home/index';
-
+import { appRoutes } from './routes';
+import { AuthService } from './_services/auth.service';
 
 
 
@@ -54,48 +30,28 @@ import * as fromHome from './home/index';
       FormsModule,
       HttpClientModule,
       BrowserAnimationsModule,
+      RouterModule.forRoot(appRoutes),
       MatSidenavModule,
       MatIconModule,
       MatListModule,
       MatToolbarModule,
       ReactiveFormsModule,
+      MatFormFieldModule,
+      MatInputModule,
+      MatCardModule
    ],
-   providers: [],
+   providers: [AuthService],
    bootstrap: [
       AppComponent
    ],
-   // exports: [
-   //    MatAutocompleteModule,
-   //    MatButtonModule,
-   //    MatButtonToggleModule,
-   //    MatCardModule,
-   //    MatCheckboxModule,
-   //    MatChipsModule,
-   //    MatStepperModule,
-   //    MatDatepickerModule,
-   //    MatDialogModule,
-   //    MatExpansionModule,
-   //    MatGridListModule,
-   //    MatIconModule,
-   //    MatInputModule,
-   //    MatListModule,
-   //    MatMenuModule,
-   //    MatNativeDateModule,
-   //    MatPaginatorModule,
-   //    MatProgressBarModule,
-   //    MatProgressSpinnerModule,
-   //    MatRadioModule,
-   //    MatRippleModule,
-   //    MatSelectModule,
-   //    MatSidenavModule,
-   //    MatSliderModule,
-   //    MatSlideToggleModule,
-   //    MatSnackBarModule,
-   //    MatSortModule,
-   //    MatTableModule,
-   //    MatTabsModule,
-   //    MatToolbarModule,
-   //    MatTooltipModule,
-   // ]
+   exports: [
+      MatSidenavModule,
+      MatIconModule,
+      MatListModule,
+      MatToolbarModule,
+      MatFormFieldModule,
+      MatInputModule,
+      MatCardModule,
+   ]
 })
 export class AppModule { }
